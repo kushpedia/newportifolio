@@ -77,8 +77,12 @@ WSGI_APPLICATION = 'portfolio_core.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'portifolio_ner5',
+        'USER': 'portifolio_ner5_user',
+        'PASSWORD': 'Qvi83QpzQOYQvDgXnxsJzD2fYb07HzZT',
+        'HOST': 'dpg-d60b7i8gjchc7398mksg-a.oregon-postgres.render.com',
+        'PORT': '5432',
     }
 }
 
