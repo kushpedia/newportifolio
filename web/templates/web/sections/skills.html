@@ -1,0 +1,21 @@
+<!-- Skills Section -->
+<section id="skills" class="section skills-section">
+    <div class="container">
+        <h2 class="section-title">My Skills</h2>
+        
+        <div class="skills-grid">
+            {% for skill in skills %}
+            <div class="skill-card glass-panel">
+                <div class="skill-icon">
+                    <i class="{{ skill.icon_class|default:'fas fa-code' }}"></i>
+                </div>
+                <h4>{{ skill.name }}</h4>
+                <div class="progress-bar-container">
+                    <div class="progress-bar" style="width: {{ skill.proficiency }}%"></div>
+                </div>
+                <span class="percentage">{{ skill.proficiency }}%</span>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

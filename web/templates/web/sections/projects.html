@@ -1,0 +1,45 @@
+<!-- Projects Section -->
+<section id="projects" class="section projects-section">
+    <div class="container">
+        <h2 class="section-title">Featured Projects</h2>
+        
+        <div class="projects-grid">
+            {% for project in projects %}
+            <div class="movie_card">
+                {% if project.image %}
+                <img src="{{ project.image.url }}" alt="{{ project.title }}" class="movie_poster">
+                {% else %}
+                <div class="movie_poster" style="background: #333; display: flex; align-items: center; justify-content: center;">
+                    <i class="fas fa-image fa-3x" style="color: #666;"></i>
+                </div>
+                {% endif %}
+
+                <div class="movie_details">
+                    <h3 class="movie_details_heading">{{ project.title }}</h3>
+                    <div class="align_center movie_data_rate">
+                        <p><em>{{ project.description|truncatechars:80 }}</em></p>
+                    </div>
+                    
+                    <div style="margin-top: auto;">
+                        {% if project.github_link %}
+                        <a href="{{ project.github_link }}" target="_blank" class="link_styles">
+                            <button class="action-btn btn-github">
+                                <i class="fab fa-github"></i> Github Repo
+                            </button>
+                        </a>
+                        {% endif %}
+                        
+                        {% if project.live_link %}
+                        <a href="{{ project.live_link }}" target="_blank" class="link_styles">
+                            <button class="action-btn btn-visit">
+                                <i class="fas fa-external-link-alt"></i> Visit The App
+                            </button>
+                        </a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

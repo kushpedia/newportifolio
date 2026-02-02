@@ -1,0 +1,39 @@
+{% extends 'web/base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- Hero Section -->
+<section id="home" class="hero">
+    <div class="container hero-container">
+        <div class="hero-content">
+            <h1 class="hero-title">Hello, I'm <br> <span class="highlight">{{ profile.full_name|default:"Henry Wanjiru" }}</span></h1>
+            <h2 class="hero-subtitle">{{ profile.title|default:"Full Stack Developer" }}</h2>
+            <p class="hero-description">
+                {{ profile.bio|default:"I build robust and modern web applications with a focus on premium aesthetics and user experience." }}
+            </p>
+            <div class="hero-buttons">
+                <a href="#contact" class="btn-primary">Hire Me</a>
+                <a href="#projects" class="btn-secondary">My Projects</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="image-wrapper">
+                {% if profile.profile_image %}
+                    <img src="{{ profile.profile_image.url }}" class="placeholder-avatar" alt="Henry Wanjiru">
+                {% else %}
+                    <!-- Fallback placeholder styling handled in CSS -->
+                    <div class="placeholder-avatar">
+                        <i class="fas fa-user-astronaut"></i>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Include Sections -->
+{% include 'web/sections/about.html' %}
+{% include 'web/sections/skills.html' %}
+{% include 'web/sections/projects.html' %}
+{% include 'web/sections/contact.html' %}
+{% endblock %}
