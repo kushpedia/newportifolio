@@ -484,8 +484,9 @@ ul {
 }
 
 .movie_details_heading {
-	font-size: 16px;
-	color: yellow;
+	font-size: 20px;
+	font-weight: bold;
+	color: rgb(99, 5, 5);
 	/* As requested */
 	margin-bottom: 5px;
 	font-family: var(--font-heading);
@@ -495,7 +496,7 @@ ul {
 	font-size: 12px;
 	font-weight: 500;
 	margin: 5px 0;
-	color: yellow;
+	color: rgb(101, 54, 9);
 }
 
 .movie_description {
