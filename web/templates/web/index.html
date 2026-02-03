@@ -18,7 +18,7 @@
         </div>
         <div class="hero-image">
             <div class="image-wrapper">
-                {% if profile.profile_link %}
+                {% if profile.profile_image_url %}
                 <img src="{{ profile.profile_image_url }}" class="placeholder-avatar" alt="{{ profile.full_name }}">
                     {% else %}
                     <!-- Fallback placeholder styling handled in CSS -->
