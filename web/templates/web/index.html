@@ -18,9 +18,9 @@
         </div>
         <div class="hero-image">
             <div class="image-wrapper">
-                {% if profile.profile_image %}
-                    <img src="{{ profile.profile_image.url }}" class="placeholder-avatar" alt="Henry Wanjiru">
-                {% else %}
+                {% if profile.profile_link %}
+                <img src="{{ profile.profile_image_url }}" class="placeholder-avatar" alt="{{ profile.full_name }}">
+                    {% else %}
                     <!-- Fallback placeholder styling handled in CSS -->
                     <div class="placeholder-avatar">
                         <i class="fas fa-user-astronaut"></i>

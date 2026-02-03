@@ -6,8 +6,8 @@
         <div class="projects-grid">
             {% for project in projects %}
             <div class="movie_card">
-                {% if project.image %}
-                <img src="{{ project.image.url }}" alt="{{ project.title }}" class="movie_poster">
+                {% if project.project_image_url %}
+                <img src="{{ project.project_image_url }}" alt="{{ project.title }}" class="movie_poster">
                 {% else %}
                 <div class="movie_poster" style="background: #333; display: flex; align-items: center; justify-content: center;">
                     <i class="fas fa-image fa-3x" style="color: #666;"></i>
